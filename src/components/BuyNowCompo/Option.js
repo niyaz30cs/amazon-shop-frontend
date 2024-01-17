@@ -15,7 +15,7 @@ function Option({deletedata,get}) {
                     Accept:"application/json",
                     "Content-type":"application/json"
                 },
-                credentials:"include"
+                // credentials:"include"
             })
             const data=await res.json();
             console.log(data);

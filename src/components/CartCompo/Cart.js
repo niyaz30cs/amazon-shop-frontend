@@ -35,7 +35,7 @@ function Cart() {
 
     useEffect(() => {
     setTimeout(getIndividualData,1000)
-    },[id]);
+    });
 
     const addTocart = async (id) => {
         console.log("hello");
@@ -48,7 +48,7 @@ function Cart() {
             body: JSON.stringify({
                 indData
             }),
-            credentials: "include"
+            // credentials: "include"
         })
 
         const data1 = await checkRes.json();

@@ -15,7 +15,7 @@ function Right({ item }) {
     // const history=useHistory()
     useEffect(() => {
         totalAmount();
-    }, [item])
+    })
 
     const totalAmount = () => {
         let price = 0;

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext,useState } from 'react'
 import "./Navbar.css";
 import SearchIcon from '@mui/icons-material/Search';
 import Badge from '@mui/material/Badge';
@@ -40,24 +40,24 @@ function Navbar() {
      const {products}=useSelector(state=>state.getProductsData)
  
     const [dropen, setDropen] = useState(false);
-    const getdetailvaliduser = async () => {
-        const res = await fetch("https://amazon-shop-backend.onrender.com/validuser", {
-            method: "GET",
-            headers: {
-                Accept: "application",
-                "Content-type": "application/json"
-            },
-            // credentials: "include"
-        });
-        const data = await res.json();
-        //  console.log(data);
-        if (res.status !== 201) {
-            console.log("Error");
-        } else {
-            console.log("Data Valid");
-            setAccount(data)
-        }
-    }
+    // const getdetailvaliduser = async () => {
+    //     const res = await fetch(`https://amazon-shop-backend.onrender.com/validuser`, {
+    //         method: "GET",
+    //         headers: {
+    //             Accept: "application",
+    //             "Content-type": "application/json"
+    //         },
+    //         // credentials: "include"
+    //     });
+    //     const data = await res.json();
+    //     //  console.log(data);
+    //     if (res.status !== 201) {
+    //         console.log("Error");
+    //     } else {
+    //         console.log("Data Valid");
+    //         setAccount(data)
+    //     }
+    // }
 
     const handleopen = () => {
         setDropen(true)
@@ -97,9 +97,9 @@ function Navbar() {
     }
 
 
-    useEffect(() => {
-        getdetailvaliduser()
-    }, [])
+    // useEffect(() => {
+    //     getdetailvaliduser()
+    // })
     return (
         <header>
             <nav>

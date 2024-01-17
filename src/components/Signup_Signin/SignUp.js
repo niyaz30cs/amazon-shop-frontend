@@ -74,7 +74,7 @@ function SignUp() {
         const data=await res.json();
         console.log(data);
         if(res.status===422 ||!data){
-            // alert("No Data")
+        
             toast.warn("invalid data",{
                 position:"top-center",
             })
