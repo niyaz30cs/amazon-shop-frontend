@@ -19,7 +19,7 @@ function Right({ item }) {
 
     const totalAmount = () => {
         let price = 0;
-        item.map((items) => {
+        item.map((items)=>{
             price = items.price.cost + price
         });
         setPrice(price)

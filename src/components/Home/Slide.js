@@ -52,7 +52,7 @@ function Slide({ title, products }) {
                       <img src={e.url} alt='not found' />
                     </div>
                     <p className='products_name'>{e.title.shortTitle}</p>
-                    <p className='products_offer'>{e.discount}</p>
+                    <p className='products_offer'>{e.price.discount}</p>
                     <p className='products_explore'>{e.tagline}</p>
                   </div>
                 </NavLink>

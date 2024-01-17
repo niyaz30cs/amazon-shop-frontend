@@ -4,6 +4,7 @@ import Banner from './Banner'
 import Slide from './Slide';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../ReduxCompo/Actions/action';
+import { Link } from 'react-router-dom';
 
 function MainCompo() {
   const {products}=useSelector(state=>state.getProductsData)
@@ -26,7 +27,8 @@ function MainCompo() {
         <div className="right_slide">
           <h4>Festive latest launches</h4>
           <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Jupiter/Launches/T3/DesktopGateway_CategoryCard2x_758X608_T3._SY608_CB639883570_.jpg" alt="rightimg" />
-          <a href="#" >see more</a>
+          {/* <a href="#" >see more</a> */}
+          <Link to="/">See More</Link>
         </div>
       </div>
       <Slide title="Today'Deal" products={products} />
